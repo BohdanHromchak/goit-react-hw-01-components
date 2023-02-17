@@ -15,4 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+  ul {
+    list-style: none;
+  }
 `;
