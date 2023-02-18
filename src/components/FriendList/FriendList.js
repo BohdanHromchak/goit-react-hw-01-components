@@ -1,19 +1,22 @@
 import PropTypes from 'prop-types';
 import { AiTwotoneCheckCircle } from 'react-icons/ai';
+import {Container, List, ListItem, Status, Name, } from './FriendList.styled'
 
 export const FriendList = ({friends}) => {
 
     return (
-        <ul>
-{friends.map(({id, avatar, name}) => {
+        <Container>
+        <List>
+{friends.map(({id, avatar, name,isOnline}) => {
     return (
-        <li key={id}>
-  <span><AiTwotoneCheckCircle /></span>
+        <ListItem key={id}>
+  <Status isOnline={isOnline}><AiTwotoneCheckCircle /></Status>
   <img src={avatar} alt={name} />
-  <p>{name}</p>
-</li>
+  <Name>{name}</Name>
+</ListItem>
     )
 })}
-        </ul>
+        </List>
+        </Container>
     )
 }

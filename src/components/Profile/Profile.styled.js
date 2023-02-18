@@ -47,7 +47,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 0.5rem;
-padding: 1rem;
+padding: 1rem 0.5rem;
 border: 0.5px solid #999797
 `
 export const StatsLabel = styled.span`
