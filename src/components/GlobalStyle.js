@@ -15,7 +15,30 @@ export const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
-  ul {
-    list-style: none;
-  }
+  
+  *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, ul, p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 `;

@@ -1,36 +1,38 @@
 import PropTypes from 'prop-types';
+import {Card, Container, User, UserName, UserInfo, Stats, StatsLabel, StatsQuantity} from './Profile.styled'
 
 export const Profile = ({username, tag, location, avatar, stats: {followers, views, likes}}) => {
 
     return (
-        <div>
-        <div>
+        <Card>
+          <Container>
+        <User>
           <img
             src={avatar}
             alt={username}
           />
-          <p>{username}</p>
-          <p>{tag}</p>
-          <p>{location}</p>
-        </div>
+          <UserName>{username}</UserName>
+          <UserInfo>{tag}</UserInfo>
+          <UserInfo>{location}</UserInfo>
+        </User>
       
-        <ul>
+        <Stats>
           <li>
-            <span>Followers</span>
-            <span>{followers}</span>
+            <StatsLabel>Followers</StatsLabel>
+            <StatsQuantity>{followers}</StatsQuantity>
           </li>
           <li>
-            <span>Views</span>
-            <span>{views}</span>
+            <StatsLabel>Views</StatsLabel>
+            <StatsQuantity>{views}</StatsQuantity>
           </li>
           <li>
-            <span>Likes</span>
-            <span>{likes}</span>
+            <StatsLabel>Likes</StatsLabel>
+            <StatsQuantity>{likes}</StatsQuantity>
           </li>
-        </ul>
-      </div>
+        </Stats>
+        </Container>
+      </Card>
     )
 }
 
 // додати propTypes
-// додати ресети в глобал стайлс
