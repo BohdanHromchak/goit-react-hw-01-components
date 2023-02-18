@@ -7,7 +7,7 @@ export const FriendList = ({friends}) => {
     return (
         <Container>
         <List>
-{friends.map(({id, avatar, name,isOnline}) => {
+{friends.map(({id, avatar, name, isOnline}) => {
     return (
         <ListItem key={id}>
   <Status isOnline={isOnline}><AiTwotoneCheckCircle /></Status>
@@ -20,3 +20,15 @@ export const FriendList = ({friends}) => {
         </Container>
     )
 }
+
+FriendList.propTypes = {
+    friends: PropTypes.arrayOf(
+    PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        avatar: PropTypes.string.isRequired, 
+        name: PropTypes.string.isRequired,
+        isOnline: PropTypes.bool.isRequired,
+
+    })
+).isRequired
+  };
