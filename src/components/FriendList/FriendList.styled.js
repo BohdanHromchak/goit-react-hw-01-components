@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
 width: 100%;
 padding: 3rem 0;
-
 `
 export const List = styled.ul`
 display: flex;
@@ -24,19 +23,7 @@ display: flex;
 align-items: center;
 gap: 1rem;
 padding: 1rem ;
-img {
+/* img {
     width: 20%;
-}
-`
-export const Status = styled.span`
-color: ${({isOnline}) => {
-if(isOnline) {
-    return 'green'
-}
-return 'red'
-}}
-`
-export const Name = styled.p`
-font-size: 1.5rem;
-font-weight: 500;
+} */
 `

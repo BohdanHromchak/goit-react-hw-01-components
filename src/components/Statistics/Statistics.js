@@ -9,7 +9,7 @@ export const Statistics = ({title, stats}) => {
 
             <Stat>
               <Container>
-  <StatTitle>{title}</StatTitle>
+ {title && <StatTitle>{title}</StatTitle>}
 
   <StatList>
     {stats.map(stat => {
