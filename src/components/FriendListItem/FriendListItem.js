@@ -3,6 +3,7 @@ import { AiTwotoneCheckCircle } from 'react-icons/ai';
 import {Status, Name} from './FriendListItem.styled'
 
 export const FriendListItem = ({name, avatar, isOnline}) => {
+    console.log()
     return(
         <>
   <Status isOnline={isOnline}>
