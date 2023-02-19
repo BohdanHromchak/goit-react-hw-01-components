@@ -1,22 +1,25 @@
 import PropTypes from 'prop-types';
 import { AiTwotoneCheckCircle } from 'react-icons/ai';
-import {Status, Name} from './FriendListItem.styled'
+import {Status, Name, Avatar} from './FriendListItem.styled'
 
-export const FriendListItem = ({name, avatar, isOnline}) => {
-    console.log()
+export const FriendListItem = ({friend:{avatar, name, isOnline}}) => {
+  
     return(
         <>
   <Status isOnline={isOnline}>
     <AiTwotoneCheckCircle />
     </Status>
-   <img src={avatar} alt={name} />
+   <Avatar src={avatar} alt={name} />
   <Name>{name}</Name>
         </>
     )
 }
 
+
 FriendListItem.propTypes = {
-    name: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
+    friend: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        isOnline: PropTypes.bool.isRequired,
+    }).isRequired,
   };

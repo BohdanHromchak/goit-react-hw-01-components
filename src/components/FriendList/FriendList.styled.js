@@ -23,7 +23,4 @@ display: flex;
 align-items: center;
 gap: 1rem;
 padding: 1rem ;
-/* img {
-    width: 20%;
-} */
 `

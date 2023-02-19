@@ -12,3 +12,6 @@ export const Name = styled.p`
 font-size: 1.5rem;
 font-weight: 500;
 `
+export const Avatar = styled.img`
+width: 20%;
+`
