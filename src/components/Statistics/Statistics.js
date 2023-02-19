@@ -9,6 +9,7 @@ export const Statistics = ({title, stats}) => {
 
             <Stat>
               <Container>
+                
  {title && <StatTitle>{title}</StatTitle>}
 
   <StatList>
